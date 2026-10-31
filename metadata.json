@@ -1,0 +1,6 @@
+{
+  "name": "B.Tech IT Sem VII Unit 1 Study Engine",
+  "description": "Exhaustive interactive exam preparation platform and technical lecture notes for B.Tech Information Technology Semester VII Unit 1 courses including Information Systems and Securities (IT 410), Data Mining and Warehousing (IT 401), Computer Graphics (CS 411), IoT (IT 412), and Big Data Analytics (CS 508).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

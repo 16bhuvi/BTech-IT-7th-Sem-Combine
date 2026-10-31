@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-canvas-deep: #0a0a0c;
+  --color-canvas-elevated: #121216;
+  --color-surface-slate: #1e1e24;
+  --color-accent-primary: #2563eb;
+  --color-accent-bright: #3b82f6;
+  --color-accent-cyan: #06b6d4;
+  --color-accent-ice: #60a5fa;
+  --color-ink-primary: #f3f4f6;
+  --color-ink-muted: #9ca3af;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #0a0a0c;
+    color: #f3f4f6;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Optical compensation & KaTeX dark mode legibility */
+.katex {
+  color: #f3f4f6;
+  font-size: 1.04em;
+}
+
+.katex-display {
+  margin: 1rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+}
+
+/* Custom sleek scrollbars for code blocks and matrices */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #272730;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* Clean print formatting for study revision export */
+@media print {
+  body {
+    background-color: #0a0a0c !important;
+    color: #f3f4f6 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
